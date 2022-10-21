@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;1,300&display=swap");
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	--line-border-fill: #9c27b0;
+	--line-border-empty: #bdbdbd;
+}
+
+body {
+	background-color: #f7ede2;
+	font-family: "Mulish", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	flex-direction: column;
+}
+header{
+	display: flex;
+	margin: 20px;
+	margin-bottom: 50px;
+}
+body > h1{
+	padding: 10px;
+	display: block;
+	text-align: center;
+	
+}
+h2 {
+	color: #212121;
+	margin-bottom: 90px;
+	font-size: 4rem;
+}
+.fa-html5 {
+	font-size: 5rem;
+	color: #ff5773;
+}
+.fa-css3-alt {
+	font-size: 5rem;
+	color: #264de4;
+}
+.fa-js {
+	font-size: 4rem;
+	color: #f7e018;
+}
+.fa-react {
+	font-size: 5rem;
+	color: #61dbfb;
+}
+
+.container {
+	text-align: center;
+	background-color: #f7b267;
+	z-index: -4;
+	border-radius: 20px;
+	padding: 30px;
+}
+.progress-container {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin-bottom: 30px;
+	width: 100%;
+	max-width: 400;
+}
+.progress-container::before {
+	content: "";
+	background-color: var(--line-border-empty);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 4px;
+	width: 100%;
+	z-index: -1;
+	transition: 0.4s ease;
+}
+.progress {
+	background-color: var(--line-border-fill);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 4px;
+	width: 25%;
+	z-index: -1;
+	transition: 0.4s ease;
+}
+
+.circle {
+	background-color: #fff;
+	color: #999;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	border: 3px solid #b2bec3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.4s ease;
+}
+
+.circle.active {
+	border-color: var(--line-border-fill);
+}
+.btn {
+	background-color: var(--line-border-fill);
+	color: white;
+	padding: 10px 30px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-family: inherit;
+	margin: 10px;
+	font-size: 1.5rem;
+	border: none;
+}
+.btn:focus {
+	outline: none;
+}
+.btn:active {
+	transform: scale(0.97);
+}
+.btn:hover{
+	background-color:#ae3dc5;
+}
+
+.btn:disabled{
+	background-color: var(--line-border-empty);
+	cursor: not-allowed;
+}
